@@ -47,6 +47,19 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<to>
+						<image>image-built-with-jib-for-service-registry</image>
+					</to>
+					<ports>
+						<port>8761</port>
+					</ports>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
